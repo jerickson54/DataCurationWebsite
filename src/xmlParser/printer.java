@@ -152,13 +152,7 @@ public class printer {
 		return allData;
 	}
 	
-	public static OregonNewsRoom findByHeadline(String headline){
-		for(OregonNewsRoom c :allData){
-			if(c.getHeadline().equals(headline))
-				return c;
-		}
-		return allData.get(1);
-	}
+
 	
 	public static int getRandom(){
 		Random rand = new Random();

@@ -43,6 +43,9 @@ public class xmlServlet extends HttpServlet {
 		ArrayList<OregonNewsRoom> toSearchBean = new ArrayList<OregonNewsRoom>();
 		
 		for(OregonNewsRoom c: allData){
+		
+		if(searchType.equals("Advanced") && c.getContent().toLowerCase().contains(seq))
+			toSearchBean.add(c);
 			
 		if(searchType.equals("Agency") && c.getAgency().toLowerCase().contains(seq))
 			toSearchBean.add(c);
@@ -71,6 +74,9 @@ public class xmlServlet extends HttpServlet {
 		
 		
 		searchBean.setSearchResults(toSearchBean);
+		searchBean.setEnd(toSearchBean.size());
+		searchBean.setIterateTo(9);
+		searchBean.setDifference(9);
 		
 		
 		

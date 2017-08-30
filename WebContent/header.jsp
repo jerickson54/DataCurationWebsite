@@ -46,8 +46,8 @@ text-align:left;
 </nav>
 
 <div class = "jumbotron text-center" style = "background-color:rgb(0,0,102);color:white;box-shadow:10px 10px 5px #888888">
-<h1 style = "">Data Curation: </h1>
-<p>Here is a caption </p>
+<h1 style = "">Oregon News Table</h1>
+<p>News brought straight to you </p>
 </div>
 
 </body>

@@ -11,6 +11,7 @@ p{
 	display:block;
 	text-indent:50px;
 }
+
 </style>
 
 <head>
@@ -36,12 +37,13 @@ p{
 <b> Contact: <c:out value = "${searchBean.getDetail().getContact2()}"/> </b>
 </div>
 
-<form action = 'extraction' method = 'GET'>
+<form action = 'extraction' method = 'GET' name = "extract">
 
-<input type = "submit" value = "Extract Keywords" />
- <input type = "submit" value = "Extract People" />
-  <input type = "submit" value = "Extract Organizations" />
-   <input type = "submit" value = "Extract Locations" />
+<!--  <input type = "text" name = "extractInput" placeholder = "Search: " />-->
+<input type = "submit" value = "Extract Keywords" name = "extract"/>
+ <input type = "submit" value = "Extract People" name = "extract"/>
+  <input type = "submit" value = "Extract Organizations" name = "extract"/>
+   <input type = "submit" value = "Extract Locations" name = "extract"/>
  
  </form>
 

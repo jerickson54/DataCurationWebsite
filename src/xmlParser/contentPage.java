@@ -33,7 +33,7 @@ public class contentPage extends HttpServlet {
 		String value = request.getParameter("value");
 		
 		printer.parseFromXML();
-		OregonNewsRoom toDisplay = printer.findByHeadline(value);
+		OregonNewsRoom toDisplay = searchBean.findByHeadline(value);
 		searchBean.setDetail(toDisplay);
 		
 		
