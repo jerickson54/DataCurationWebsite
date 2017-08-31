@@ -1,10 +1,15 @@
 package xmlParser;
 
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
+
+
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -17,9 +22,7 @@ public class printer {
 	
 	//used to store all the data
 	private static ArrayList<OregonNewsRoom> allData = new ArrayList<OregonNewsRoom>();
-	
-	//used for drop down
-	private static Set<OregonNewsRoom> allAgency = new HashSet<OregonNewsRoom>();
+
 	
 	
 
@@ -51,7 +54,15 @@ public class printer {
 		try {
 			allData.clear();
 			DOMParser parser = new DOMParser();
-			parser.parse("C:/comp9321/DataCuration/WebContent/WEB-INF/oregonNewsroom.xml");
+			URL url =printer.class.getResource("../../");
+			
+			parser.parse(url.getPath() + "/oregonNewsroom.xml");
+			
+			
+			
+			
+			
+			
 			Document d = parser.getDocument();
 
 			// root object type
