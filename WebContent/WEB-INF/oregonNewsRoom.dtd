@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!ELEMENT row (agency+,headline+,publish_date*,publish_year*,city+,state+,content*,footer_content*,contact1*, contact2*,date_entered*,entered_by*,date_last_modified*,last_modified_by*)>
+<!ELEMENT row (agency+,headline+,publish_date*,publish_year*,city+,
+state+,content*,footer_content*,contact1*, contact2*,date_entered*,entered_by*,date_last_modified*,last_modified_by*)>
+
 <!ATTLIST row
 	row_id CDATA #REQUIRED
 	_uuid CDATA #REQUIRED

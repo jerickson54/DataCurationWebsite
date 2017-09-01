@@ -1,8 +1,11 @@
 package xmlParser;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.stanford.nlp.io.EncodingPrintWriter.out;
 import unsw.curation.api.extractnamedentity.ExtractEntitySentence;
+import unsw.curation.api.tokenization.ExtractionKeywordImpl;
 
 /**
  * Servlet implementation class extraction
@@ -42,12 +46,21 @@ public class extraction extends HttpServlet {
 		nothing.add("Sorry no results");
 		
 		if(type.equals("Extract Keywords")){
+			ExtractionKeywordImpl ek = new ExtractionKeywordImpl();
+			
+			URL url =printer.class.getResource("/");
+
+			String file = url.getPath() + "xmlParser/englishStopwords.txt";
+			
 			try {
-				List<String> keywords = fSentence.ExtractOrganization(content);
-				keywords.addAll(fSentence.ExtractPerson(content));
-				keywords.addAll(fSentence.ExtractLocation(content));
+				String keys = ek.ExtractSentenceKeyword(content, new File(file));
+				System.out.println(keys);
+				List<String> keywords = Arrays.asList(keys.split("\\s*,\\s*"));
 				searchBean.setExtractedInformation(keywords);
-			} catch (URISyntaxException e) {
+				
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
 				searchBean.setExtractedInformation(nothing);
 			}
 		}
