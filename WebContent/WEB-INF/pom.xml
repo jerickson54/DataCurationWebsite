@@ -1,8 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
   <version>1</version>
+  
+ <servlet>
+	<servlet-name> xmlServlet</servlet-name>
+</servlet>
+
+<servlet>
+	<servlet-name> pageManager</servlet-name>
+</servlet>
+
+<servlet>
+	<servlet-name> extraction </servlet-name>
+</servlet>
   
 <dependency>
   <groupId>javax.servlet</groupId>

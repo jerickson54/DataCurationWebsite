@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT row (agency+,headline+,publish_date*,publish_year*,city+,state+,content*,footer_content*,contact1*, contact2*,date_entered*,entered_by*,date_last_modified*,last_modified_by*)>
+<!ATTLIST row
+	row_id CDATA #REQUIRED
+	_uuid CDATA #REQUIRED
+	_position CDATA #REQUIRED
+	_address ID #REQUIRED
+	>
+<!ELEMENT agency (#PCDATA)>
+<!ELEMENT headline (#PCDATA)>
+<!ELEMENT publish_date (#PCDATA)>
+<!ELEMENT publish_year (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+<!ELEMENT footer_content (#PCDATA)>
+<!ELEMENT contact1 (#PCDATA)>
+<!ELEMENT contact2 (#PCDATA)>
+<!ELEMENT date_entered (#PCDATA)>
+<!ELEMENT entered_by (#PCDATA)>
+<!ELEMENT date_last_modified (#PCDATA)>
+<!ELEMENT last_modified_by (#PCDATA)>
+
+

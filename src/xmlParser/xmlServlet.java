@@ -77,6 +77,7 @@ public class xmlServlet extends HttpServlet {
 		searchBean.setEnd(toSearchBean.size());
 		searchBean.setIterateTo(9);
 		searchBean.setDifference(9);
+		searchBean.setStart(0);
 		
 		
 		
